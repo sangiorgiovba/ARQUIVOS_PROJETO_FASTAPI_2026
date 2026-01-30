@@ -1,0 +1,47 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="container d-flex justify-content-center align-items-center" style="min-height: 75vh;">
+  <div class="col-md-8 col-lg-6">
+
+    <div class="card border-0 shadow-sm">
+      <div class="card-body text-center p-5">
+
+        <!-- Código do erro -->
+        <div class="display-1 fw-bold text-danger mb-3">
+          {{ status_code }}
+        </div>
+
+        <!-- Título -->
+        <h2 class="fw-semibold mb-3">
+          Ops! Algo não saiu como esperado
+        </h2>
+
+        <!-- Mensagem vinda do backend -->
+        <p class="text-body-secondary fs-5 mb-4">
+          {{ message }}
+        </p>
+
+        <hr class="my-4">
+
+        <!-- Ações -->
+        <div class="d-flex justify-content-center gap-3">
+          <a href="/" class="btn btn-primary px-4">
+            Ir para o início
+          </a>
+          <a href="javascript:history.back()" class="btn btn-outline-secondary px-4">
+            Voltar
+          </a>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Mensagem discreta -->
+    <p class="text-center text-muted small mt-4">
+      Se o problema persistir, entre em contato com o suporte.
+    </p>
+
+  </div>
+</div>
+{% endblock content %}
